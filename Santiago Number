@@ -1,1 +1,14 @@
+// santiago number-> a number whose first digit is 1 
 
+
+long long int getsantiago(long long int l, long long int r){
+    long long int count=0;
+    for(long long int i=l; i<=r; i++){
+        long long int no=log10(i);
+        long long int it=i/pow(10,no);
+        if(it==1){
+            count++;
+        }
+    }
+    return count;
+}
